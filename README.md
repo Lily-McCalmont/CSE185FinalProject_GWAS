@@ -4,7 +4,10 @@
 Our aim is to create a genome-wide association (GWA) test to find significant variant-trait associations. Briefly, our tool will take in genotype data (variants) across people in plink bed/bim/fam format along with their phenotype data and output an effect size (𝜷) and a p-value for each snp. In addition, we aim to create a script to visualize GWAS data with a Manhattan plot. Our tool can be benchmarked against the plink --linear association test. We will implement our tool as a python script with genotype and phenotype files to test our script. 
 
 # Install Instructions
-Installation requires random, numpy as np, and LinearRegression. Install like this:
+Installation requires random, numpy as np, and LinearRegression. 
+
+Install like this:
+
 import ___________
 from sklearn.linear_model import LinearRegression
 
