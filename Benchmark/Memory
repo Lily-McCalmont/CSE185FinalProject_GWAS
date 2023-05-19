@@ -1,0 +1,14 @@
+Using memusg to benchmark memory: 
+* for more information go here https://github.com/jhclark/memusg *
+example:
+input:
+> memusg mypileup -f test.fa test.bam
+
+output:
+memusg: vmpeak: 40776 kb
+
+# Test
+plink --linear association:
+
+our tool:
+
