@@ -1,1 +1,9 @@
+Using the time command to measure the runtime of plink versus our tool:
+
+example: time mypileup -f example-files/test.fa example-files/test.bam
+
+plink --linear association test
+
+
+Our tool:
 
