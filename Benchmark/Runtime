@@ -8,7 +8,7 @@ real 0m0.171s // The real life time the command takes, it includes time taken by
 user 0m0.143s // CPU time spent in user mode.
 sys 0m0.028s // CPU time spent in kernel mode.
 
-
+# Test
 plink --linear association test
 
 
