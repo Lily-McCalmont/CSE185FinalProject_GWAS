@@ -1,0 +1,16 @@
+Using the time command to measure the runtime of plink versus our tool:
+
+example: time mypileup -f example-files/test.fa example-files/test.bam
+
+The result should look something like this:
+
+real 0m0.171s // The real life time the command takes, it includes time taken by all processes.
+user 0m0.143s // CPU time spent in user mode.
+sys 0m0.028s // CPU time spent in kernel mode.
+
+# Test
+plink --linear association test
+
+
+Our tool:
+
