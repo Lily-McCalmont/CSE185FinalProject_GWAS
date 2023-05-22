@@ -7,9 +7,11 @@ Our aim is to create a genome-wide association (GWA) test to find significant va
 Installation requires random, numpy as np, and LinearRegression. 
 
 Install like this:
-
 import ___________
+
 from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
 
 Install locally:
 
