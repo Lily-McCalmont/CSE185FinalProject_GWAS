@@ -13,8 +13,6 @@ from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
-Install locally:
-
 # Basic Uses
 Basic usage:
 
