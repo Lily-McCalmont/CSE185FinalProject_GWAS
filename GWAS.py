@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+import random
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
 import sys
 import getopt
 import argparse
@@ -22,12 +26,6 @@ for line in arguments.file:
     
     
 x = function(array2, arguments.prefix, arguments.plot, arguments.signficant)
-=======
-import random
-import numpy as np
-from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm
-import matplotlib.pyplot as plt
 
 #----simualtion
 
@@ -76,4 +74,3 @@ plt.show()
 
 
 #--- real life dataset
->>>>>>> a11a61329bf0e40622c79ddf9dd9d8070ab96533
