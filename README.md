@@ -5,8 +5,8 @@ Our aim is to create a genome-wide association (GWA) test to find significant va
 
 # Install Instructions 
 `Python` must be installed to run the program.  
-<!-- - Go to [link](https://www.python.org/downloads/) and click "Download  -->
-Check to see if `Python` is installed using `python --version` to confirm.  
+- Go to [link](https://www.python.org/downloads/) and download the version for your device.  
+Check to see if `Python` is installed. There should be "Python 3.11.3" in the top left ofthe terminal. 
 
 Installation requires `random`, `numpy as np`, `statsmodels.api`, and `matplotlib.pylot`. 
 
