@@ -20,7 +20,7 @@ command line ->
 To run in test examples:
 command line ->  
 
-When you run the plotting code with the given test values your plot should look like this:   
+When running the histogram plotting code with the given test values the plot should look like this:   
 ![histo_test.png](file:///Users/lilymccalmont/Desktop/histo.plt.png)) 
 
 # Complete Usage Instructions
