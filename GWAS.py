@@ -1,6 +1,5 @@
 import random
 import numpy as np
-from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
@@ -15,7 +14,7 @@ maf = 0.2
 
 #simulate genotypes as a matrix of people on rows, snps on columns (binomial distribution)
 genotype_values = np.random.binomial(2, 0.2, size=(1000, 10000))
-print(genotype_values.shape) #check 1000 individuals, 10000 snps
+#print(genotype_values.shape) #check 1000 individuals, 10000 snps
 
 #simulate phenotypes as a normal distribution 
 phenotype_values = np.random.normal(size=1000)
@@ -30,9 +29,19 @@ for i in range(num_snps):
     betas.append(lm.params[0])
     p_values.append(lm.pvalues[0])
 
-#extract p values using the distribution of effect sizes of each snp 
-plt.hist(betas)
-plt.show()
+#plot the distribution of effect sizes of each snp 
+#plt.hist(betas)
+#plt.show()
+
+#function to filter for nominally significant
+def filter_nominal(i):
+    return i < 0.05
+
+#function to filter for genome-wide significant 
+def filter_bonferroni(i):
+    return i < 5e-8 #change to number of snps
+
+print(list(filter(filter_nominal, p_values)))
 
 #bonferroni correct the p values 
 
@@ -40,7 +49,7 @@ plt.show()
 
 #write a table of all hits and their p values are z scores
 
-#plot results? 
+#plot results? - manhattan
 
 
 
