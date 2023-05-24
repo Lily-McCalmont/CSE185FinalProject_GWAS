@@ -20,7 +20,7 @@ To run in test examples:
 command line ->  
 
 When running the histogram plotting code with the given test values the plot should look like this:  
-![histogram_example](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/blob/main/image.jpg?raw=true)
+<!-- ![histogram_example](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/blob/main/image.jpg?raw=true) -->
 
 # Options
 The required input:  
