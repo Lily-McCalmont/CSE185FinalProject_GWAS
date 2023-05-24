@@ -2,29 +2,52 @@ import random
 import numpy as np
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
-import sys
-import getopt
 import argparse
 import pandas as pd
-from os.path import join
-from pandas_plink import read_plink
-from pandas_plink import get_data_folder
+import os.path
+import gzip
+import pandas_plink
 
+
+#---parse arguments
 arg = argparse.ArgumentParser()
-arg.add_argument('file', type = argparse.FileType('r'))
+arg.add_argument('phenotype')
 arg.add_argument("-p", dest = "plot", help = "If Plot shows", type = bool)
-arg.add_argument("-s", dest = "signficant", help = "only show signficant variants", type = bool)
-arg.add_argument("-f", dest = "prefix", help = "prefix of files", type = str)
+arg.add_argument("-sig", dest = "signficant", help = "only show signficant variants", type = bool)
+arg.add_argument("-g", dest = "geno", help = "path to genotype file in plink format", type = str) #plink prefix 
 
 arguments = arg.parse_args()
-array2 = []
-array1 = []
-for line in arguments.file: 
-    array1.append(line)
-    array2.append(array1)
-    
-    
-x = function(array2, arguments.prefix, arguments.plot, arguments.signficant)
+
+if not os.path.isfile(arguments.phenotype):
+    print("invalid phenotype file. make sure file exists")
+    quit()
+
+if arguments.plot is True:
+    print("program will plot final result")
+
+if arguments.signficant is True:
+    print("only output significant hits")
+
+#--- for reading in vcf file using pandas - need name of columns
+def read_vcf_names(vcf):
+    with gzip.open(vcf, "rt") as file:
+          for l in file:
+            if l.startswith("#CHROM"):
+                  names = [x for x in l.split('\t')]
+                  break
+    file.close()
+    return names
+
+#---read in genotypes
+
+if os.path.isfile(arguments.geno):
+    bim,fam,geno  = pandas_plink.read_plink(arguments.geno)
+    geno_matrix = geno.compute()
+    print(geno_matrix)
+else:
+    print("invalid genotype file. make sure file exists")
+    quit()
+
 
 #----simualtion
 
