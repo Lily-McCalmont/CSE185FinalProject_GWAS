@@ -18,7 +18,8 @@ Basic usage:
 command line -> 
 
 To run in test examples:
-command line ->  
+command line -> 
+When you run the plotting code with the given test values your plot should look like this:  
 ![histo_test.png](file:///Users/lilymccalmont/Desktop/histo.plt.png)) 
 
 # Complete Usage Instructions
