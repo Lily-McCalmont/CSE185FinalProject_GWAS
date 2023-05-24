@@ -1,4 +1,4 @@
-Plink commands used in lab 3:
+Plink commands and data used in lab 3:
 
 %pylab inline
 import os
