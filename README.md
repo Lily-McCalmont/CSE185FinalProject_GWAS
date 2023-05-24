@@ -20,9 +20,13 @@ To run in test examples:
 command line ->  
 
 When running the histogram plotting code with the given test values the plot should look like this:   
-![histo_test.png](file:///Users/lilymccalmont/Desktop/histo.plt.png)) 
 
 # Options
+The required input:  
+
+- `-f``--fasta FILE`: 
+- `-r``--region REG`:
+- `-o``--output FILE`:
 
 # Contributors
 This repository was made by Kai Akamatsu, Rueshil Fadia, and Lily McCalmont with inspiration from plink --linear association test.
