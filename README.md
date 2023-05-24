@@ -24,9 +24,9 @@ When running the histogram plotting code with the given test values the plot sho
 # Options
 The required input:  
 
-- `-f``--fasta FILE`: 
-- `-r``--region REG`:
-- `-o``--output FILE`:
+- `-f --fasta FILE`: 
+- `-r --region REG`:
+- `-o --output FILE`:
 
 # Contributors
 This repository was made by Kai Akamatsu, Rueshil Fadia, and Lily McCalmont with inspiration from plink --linear association test.
