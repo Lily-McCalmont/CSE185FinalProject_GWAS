@@ -36,5 +36,4 @@ The required input:
 
 # Contributors
 This repository was made by Kai Akamatsu, Rueshil Fadia, and Lily McCalmont with inspiration from plink --linear association test.
-
 Please submit a pull request with any corrections or suggestions.
