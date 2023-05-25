@@ -1,0 +1,30 @@
+PLINK v1.90b6.9 64-bit (4 Mar 2019)
+Options in effect:
+  --allow-no-sex
+  --make-bed
+  --out Testing/lab3_try
+  --pheno ../public/lab3/lab3_gwas.phen
+  --vcf ../public/lab3/lab3_gwas.vcf.gz
+
+Hostname: dsmlp-jupyter-kakamatsu
+Working directory: /home/kakamatsu/CSE185FinalProject_GWAS
+Start time: Wed May 24 23:37:54 2023
+
+Random number seed: 1684971474
+385381 MB RAM detected; reserving 192690 MB for main workspace.
+--vcf: Testing/lab3_try-temporary.bed + Testing/lab3_try-temporary.bim +
+Testing/lab3_try-temporary.fam written.
+917845 variants loaded from .bim file.
+207 people (0 males, 0 females, 207 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to Testing/lab3_try.nosex .
+207 phenotype values present after --pheno.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 207 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.999834.
+917845 variants and 207 people pass filters and QC.
+Phenotype data is quantitative.
+--make-bed to Testing/lab3_try.bed + Testing/lab3_try.bim +
+Testing/lab3_try.fam ... done.
+
+End time: Wed May 24 23:37:59 2023
