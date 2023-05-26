@@ -1,41 +1,78 @@
 # CSE185FinalProject_GWAS
 
 # Genome-wide association study to identify variant-trait associations
-Our aim is to create a genome-wide association (GWA) test to find significant variant-trait associations. Briefly, our tool will take in genotype data (variants) across people in plink bed/bim/fam format along with their phenotype data and output an effect size (𝜷) and a p-value for each snp. In addition, we aim to create a script to visualize GWAS data with a Manhattan plot. Our tool can be benchmarked against the plink --linear association test. We will implement our tool as a python script with genotype and phenotype files to test our script. 
+Our aim is to create a genome-wide association study (GWAS) tool to find significant variant-trait associations. Briefly, our tool takes in genotype data (variants) across people in plink bed/bim/fam format with the phenotype data per individual in the 6th column of the fam file. It outputs a csv file with effect size (𝜷) and a p-value for each snp (with options to limit to nominally significant snps). In addition, we aim to create a script to visualize GWAS data with a Manhattan plot. Our tool can be benchmarked against the plink --linear association test. Our tool is implemented as a python script. 
 
 # Install Instructions 
-`Python` must be installed to run the program.  
-- Go to [link](https://www.python.org/downloads/) and download the version for your device.  
-Check to see if `Python` is installed with "python --version"
+`Python` must be installed to run the program. 
+
+Install python through [this link](https://www.python.org/downloads/). Download the proper version for your device.
+- Go to your command line and check to see if `Python` is installed with `python3 --version`
+- The Jupyter Notebook is a great alternative (instead of the command line)
 
 The program requires the following python packages:
-`random`
-`numpy`
-`statsmodels.api`
-`matplotlib.pylot`
+- `random`
+- `numpy`
+- `statsmodels.api`
+- `matplotlib.pylot`
+- `argparse`
+- `pandas`
+- `os.path`
+- `gzip`
+- `pandas_plink`
 
-```  
-please add installation commands you used here
-```
+If any of these python packages have to be installed, use the pip command to install it:
+- `pip install numpy`
+- `python -m pip install statsmodels`
+- `python -m pip install -U matplotlib`
+- `pip install pandas`
+- `pip install argparse`
+- `pip install pandas-plink`
+
+# Clone the repository locally
+in your terminal, run the following:
+- `git clone <link to repository>`
+- `cd CSE185FinalProject_GWAS`
+
+# Available files for testing
+in the "Testing" directory, we have included examples of properly formatted inputs
+- plink files with prefix: "lab3_try"
 
 # Basic Uses
 Basic usage:
 
-command line -> 
+`python GWAS.py <path to plink files> [options (see below) ] `
 
-To run in test examples:
-command line ->  
+- "path to plink files" should be in the plink prefix form: "plinkfile" instead of "plinkfile.bim" (bed/fam)
 
-When running the histogram plotting code with the given test values the plot should look like this:  
+When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the distribution of betas, the plot should look like this:  
 <!-- ![histogram_example](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/blob/main/image.jpg?raw=true) -->
 
 # Options
-The required input:  
+- `-p`: True = plot the distribution of p-values as a histogram. False = don't plot p-values
+- `-sig`: True = save only nominally significant hits. False = save p-values and betas for all snps
+- `-sim`: True = run simulation, without real genotype and phenotype data. please put a random file name as the path to plink files
 
-- `-f --fasta FILE`: 
-- `-r --region REG`:
-- `-o --output FILE`:
+# Outputs
+- "significant.csv" = csv file of nominally significant hits. column 1 = snps, column 2 = p values, column 3 = betas
+- "results.csv" = csv file of all associations. column 1 = snps, column 2 = p values, column 3 = betas
+- "simulation_betas.png" = a histogram of betas when you use the simulated option
+- "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
+  
+# Examples 
+to run a simulation: 
 
+`python GWAS.py randomfile -sig True`
+  
+to run the testing data set from lab3:
+
+`python GWAS.py Testing/lab3_try -p True -sig True`
+  
+# Recommendations
+- if you are finding associations for a large number of snps, use nohup to run the program in the background
+
+`nohup <command> &`
+  
 # Contributors
 This repository was made by Kai Akamatsu, Rueshil Fadia, and Lily McCalmont with inspiration from plink --linear association test.
 Please submit a pull request with any corrections or suggestions.
