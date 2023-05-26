@@ -61,10 +61,12 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
   
 # Examples 
 to run a simulation: 
-python GWAS.py randomfile -sig True
+
+`python GWAS.py randomfile -sig True`
   
 to run the testing data set from lab3:
-python GWAS.py Testing/lab3_try -p True -sig True
+
+`python GWAS.py Testing/lab3_try -p True -sig True`
   
 # Recommendations
 - if you are finding associations for a large number of snps, use nohup to run the program in the background
