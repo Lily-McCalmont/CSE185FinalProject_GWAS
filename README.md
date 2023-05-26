@@ -15,9 +15,7 @@ The program requires the following python packages:
 `statsmodels.api`
 `matplotlib.pylot`
 
-```  
-please add installation commands you used here
-```
+
 
 # Basic Uses
 Basic usage:
