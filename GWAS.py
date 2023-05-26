@@ -54,7 +54,7 @@ if not os.path.isfile(arguments.geno + ".fam"):
     quit()
 
 if arguments.plot is True:
-    print("program will plot final result")
+    print("program will plot final manhattan plot and p value distribution")
 
 if arguments.signficant is True:
     print("only output significant hits")
@@ -65,7 +65,9 @@ if arguments.signficant is True:
 if os.path.isfile((arguments.geno + ".bed")):
     bim,fam,geno  = pandas_plink.read_plink(arguments.geno)
     geno_matrix = geno.compute()
-    #print(geno_matrix.shape)
+    print(geno_matrix.shape)
+    df = pd.DataFrame({'snp' : bim.iloc[:,1]})
+    print(df)
     pheno = fam['trait'].to_numpy() #REQUIRES PHENO TO BE IN 6TH COLUMN OF FAM FILE
     #print(pheno)
 else:
@@ -87,12 +89,15 @@ p_values = []
 
 for i in range(geno.shape[1]):
     lm = sm.OLS(pheno, geno[:,i].reshape(-1, 1), missing = 'drop').fit()
-    print(lm.pvalues[0])
+    #print(lm.pvalues[0])
     betas.append(lm.params[0])
     p_values.append(lm.pvalues[0])
 
-plt.hist(p_values)
-plt.savefig('lab3_pvalues.png')
+
+if arguments.plot is True:
+    #plot histogram of p values in 100 bins
+    plt.hist(p_values, bins=1000)
+    plt.savefig('lab3_pvalues.png')
 
 
 #function to filter for nominally significant
@@ -103,21 +108,22 @@ def filter_nominal(i):
 def filter_bonferroni(i):
     return i < 5e-8 #change to number of snps
 
+#make a dataframe of snps and p values
+df['pvalues'] = p_values
+df['beta'] = betas
 
-#bonferroni correct the p values 
-
-#report significant hits 
-
-#write a table of all hits and their p values are z scores
+#if user only wants significant hits, subset to those
+#write a table of hits and their p values
+if arguments.signficant is True:
+    significant_df = df[df['pvalues'] < 0.05]
+    significant_df.sort_values(by = 'pvalues', inplace = True)
+    significant_df.to_csv("significant.csv", index = False)
+else:
+    df.sort_values(by = 'pvalues', inplace = True)
+    df.to_csv("results.csv")
 
 #plot results? - manhattan
 
 
 
-#--- lab plink datasets 
 
-
-
-
-
-#--- real life dataset
