@@ -70,7 +70,8 @@ to run the testing data set from lab3:
   
 # Recommendations
 - if you are finding associations for a large number of snps, use nohup to run the program in the background
-nohup <command> &
+
+`nohup <command> &`
   
 # Contributors
 This repository was made by Kai Akamatsu, Rueshil Fadia, and Lily McCalmont with inspiration from plink --linear association test.
