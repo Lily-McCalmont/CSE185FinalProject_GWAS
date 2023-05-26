@@ -1,0 +1,243 @@
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                    | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████▎                                                                                                                  | 1/3 [00:00<00:01,  1.31it/s]Mapping files:  67%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                         | 2/3 [00:00<00:00,  2.58it/s]Mapping files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.21it/s]Mapping files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.70it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+Traceback (most recent call last):
+  File "/home/kakamatsu/CSE185FinalProject_GWAS/GWAS.py", line 112, in <module>
+    df['pvalues'] = p_values.tolist()
+AttributeError: 'list' object has no attribute 'tolist'
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                                                                                                                                                                   | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                                                                                                                  | 1/3 [00:00<00:01,  1.38it/s]Mapping files:  67%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                         | 2/3 [00:00<00:00,  2.75it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.36it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.84it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+Empty DataFrame
+Columns: [snp, pvalues]
+Index: []
+Traceback (most recent call last):
+  File "/home/kakamatsu/CSE185FinalProject_GWAS/GWAS.py", line 120, in <module>
+    significant_df.to_excel("significant.xlsx")
+  File "/opt/conda/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.9/site-packages/pandas/core/generic.py", line 2374, in to_excel
+    formatter.write(
+  File "/opt/conda/lib/python3.9/site-packages/pandas/io/formats/excel.py", line 944, in write
+    writer = ExcelWriter(  # type: ignore[abstract]
+  File "/opt/conda/lib/python3.9/site-packages/pandas/io/excel/_openpyxl.py", line 56, in __init__
+    from openpyxl.workbook import Workbook
+ModuleNotFoundError: No module named 'openpyxl'
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                    | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████▎                                                                                                                  | 1/3 [00:00<00:01,  1.28it/s]Mapping files:  67%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                         | 2/3 [00:00<00:00,  2.63it/s]Mapping files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.37it/s]Mapping files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.78it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+               snp   pvalues
+1        rs3131972  0.003039
+3       rs11240777  0.032101
+9       rs13302982  0.014356
+10       rs1110052  0.047639
+15      rs13303010  0.012631
+...            ...       ...
+917675   rs7290471  0.026748
+917760   rs8142477  0.016345
+917764   rs5770913  0.024183
+917765   rs1557502  0.033190
+917842  rs13056621  0.011558
+
+[30371 rows x 2 columns]
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                    | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████▎                                                                                                                  | 1/3 [00:00<00:01,  1.29it/s]Mapping files:  67%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                         | 2/3 [00:00<00:00,  2.56it/s]Mapping files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.29it/s]Mapping files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.73it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+Traceback (most recent call last):
+  File "/home/kakamatsu/CSE185FinalProject_GWAS/GWAS.py", line 119, in <module>
+    significant_df.sort_values('1')
+  File "/opt/conda/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.9/site-packages/pandas/core/frame.py", line 6912, in sort_values
+    k = self._get_label_or_level_values(by, axis=axis)
+  File "/opt/conda/lib/python3.9/site-packages/pandas/core/generic.py", line 1850, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: '1'
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                                                                                                                                                                   | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                                                                                                                  | 1/3 [00:00<00:01,  1.31it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.35it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.90it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+Traceback (most recent call last):
+  File "/home/kakamatsu/CSE185FinalProject_GWAS/GWAS.py", line 119, in <module>
+    significant_df.sort_values('1')
+  File "/opt/conda/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.9/site-packages/pandas/core/frame.py", line 6912, in sort_values
+    k = self._get_label_or_level_values(by, axis=axis)
+  File "/opt/conda/lib/python3.9/site-packages/pandas/core/generic.py", line 1850, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: '1'
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                                                                                                                                                                   | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                                                                                                                  | 1/3 [00:00<00:01,  1.25it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.20it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.77it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                                                                                                                                                                   | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                                                                                                                  | 1/3 [00:00<00:01,  1.29it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.25it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.82it/s]
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                                                                                                                                                                   | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                                                                                                                  | 1/3 [00:00<00:01,  1.24it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  3.18it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.75it/s]
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+/opt/conda/lib/python3.9/site-packages/statsmodels/tsa/base/tsa_model.py:7: FutureWarning: pandas.Float64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import (to_datetime, Int64Index, DatetimeIndex, Period,
+program will plot final manhattan plot and p value distribution
+only output significant hits
+Mapping files:   0%|                                                                                                                                                                                                                                                                                                                                   | 0/3 [00:00<?, ?it/s]Mapping files:  33%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                                                                                                                  | 1/3 [00:00<00:01,  1.39it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00,  3.54it/s]Mapping files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00,  3.07it/s]
+/home/kakamatsu/CSE185FinalProject_GWAS/GWAS.py:119: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  significant_df.sort_values(by = 'pvalues', inplace = True)
+(917845, 207)
+               snp
+0        rs3094315
+1        rs3131972
+2       rs12124819
+3       rs11240777
+4        rs6681049
+...            ...
+917840   rs3810648
+917841   rs2285395
+917842  rs13056621
+917843   rs5771007
+917844   rs3888396
+
+[917845 rows x 1 columns]
