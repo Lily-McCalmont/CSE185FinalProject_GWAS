@@ -41,7 +41,7 @@ in the "Testing" directory, we have included examples of properly formatted inpu
 # Basic Uses
 Basic usage:
 
-python GWAS.py <path to plink files> [options (see below) ]
+`python GWAS.py <path to plink files> [options (see below) ] `
 
 - "path to plink files" should be in the plink prefix form: "plinkfile" instead of "plinkfile.bim" (bed/fam)
 
