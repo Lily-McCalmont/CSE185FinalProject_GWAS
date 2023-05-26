@@ -6,7 +6,8 @@ Our aim is to create a genome-wide association (GWA) test to find significant va
 # Install Instructions 
 `Python` must be installed to run the program.  
 - Go to [link](https://www.python.org/downloads/) and download the version for your device.  
-Check to see if `Python` is installed with "python --version"
+- Go to your home terminal and enter it
+- Check to see if `Python` is installed with `python3 --version`
 
 The program requires the following python packages:
 `random`
