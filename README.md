@@ -11,13 +11,8 @@ For Macbook:
 - Go to your home terminal and enter it
 - Check to see if `Python` is installed with `python3 --version`
 
-For VSCode:
-- 
--
--
-
-Jupter notebook:
-- If no other terminal is working, use Jupter to run your python code. 
+Jupyter Notebook:
+- If no other terminal is working, use Jupyter to run your python code. 
 
 The program requires the following python packages:
 `random`
