@@ -71,11 +71,12 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 - "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
   
 # Examples 
-to run a simulation: 
+*Note: Please remember, if running these commands from personal terminal the syntax is `python3` for all commands.
+To run a simulation: 
 
 `python GWAS.py randomfile -sig True`
   
-to run the testing data set from lab3:
+To run the testing data set from lab3:
 
 `python GWAS.py Testing/lab3_try -p True -sig True`
   
