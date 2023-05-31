@@ -58,7 +58,7 @@ Basic usage:
 - "path to plink files" should be in the plink prefix form: "plinkfile" instead of "plinkfile.bim" (bed/fam)
 
 When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the distribution of betas, the plot should look like this:  
-<!-- ![histogram_example](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/blob/main/image.jpg?raw=true) -->
+![image](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/assets/134024621/5fc22cdc-263d-48c5-8fbc-7363074e7e16) 
 
 # Options
 - `-p`: True = plot the distribution of p-values as a histogram. False = don't plot p-values
