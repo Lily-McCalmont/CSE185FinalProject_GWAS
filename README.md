@@ -39,7 +39,7 @@ If any of these python packages have to be installed, use the pip command to ins
 *Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
 
 # Clone the repository locally
-in your terminal, run the following:
+In your terminal, run the following:
 - `git clone <link to repository>`
 - `cd CSE185FinalProject_GWAS`
 
