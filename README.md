@@ -40,6 +40,7 @@ If any of these python packages have to be installed, use the pip command to ins
 
 # Clone the repository locally
 In your terminal, run the following:
+- Please make sure your device is plugged in before running `xcode-select --install`. This will take quite a while.
 - `git clone <link to repository>`
 - `cd CSE185FinalProject_GWAS`
 
