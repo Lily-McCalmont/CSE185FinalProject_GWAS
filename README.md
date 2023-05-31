@@ -57,7 +57,7 @@ Basic usage:
 - "path to plink files" should be in the plink prefix form: "plinkfile" instead of "plinkfile.bim" (bed/fam)
 
 When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the distribution of betas, the plot should look like this:  
-<!-- ![histogram_example](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/blob/main/image.jpg?raw=true) -->
+![histogram_example](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/blob/main/image.jpg?raw=true)
 
 # Options
 - `-p`: True = plot the distribution of p-values as a histogram. False = don't plot p-values
@@ -71,7 +71,7 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 - "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
   
 # Examples 
-*Note: Please remember, if running these commands from personal terminal the syntax is `python3` for all commands.
+*Note: Please remember, if running these commands from personal terminal the syntax is `python3` for all commands.  
 To run a simulation: 
 
 `python GWAS.py randomfile -sig True`
