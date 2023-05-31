@@ -8,6 +8,7 @@ Our aim is to create a genome-wide association study (GWAS) tool to find signifi
 
 Install python through [this link](https://www.python.org/downloads/). Download the proper version for your device.
 - Go to your command line and check to see if `Python` is installed with `python3 --version`
+- Note* every command run through `python3` must be in the format `python3 [command]`.
 - The Jupyter Notebook is a great alternative (instead of the command line).  
 
 To implement many of the packages in python in your local directory, download Anaconda through [this link](https://www.anaconda.com/download).
