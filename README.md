@@ -11,9 +11,9 @@ Install python through [this link](https://www.python.org/downloads/). Download 
 - The Jupyter Notebook is a great alternative (instead of the command line).  
 
 To implement many of the packages in python in your local directory, download Anaconda through [this link](https://www.anaconda.com/download).
-- Once intalled, type `ls` in your home directory and check if there is a directory `anaconda3`.
+- Once installed, type `ls` in your home directory and check if there is a directory `anaconda3`.
+- Once `anaconda3` is in your home directory, you can proceed.
 - Use the `pip install` format below in order to install the required packages.  
-
 
 The program requires the following python packages:
 - `random`
