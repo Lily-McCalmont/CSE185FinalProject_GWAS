@@ -35,6 +35,7 @@ If any of these python packages have to be installed, use the pip command to ins
 - `pip install pandas`
 - `pip install argparse`
 - `conda install -c conda-forge pandas-plink`   
+
 *Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
 
 # Clone the repository locally
