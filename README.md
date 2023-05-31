@@ -43,6 +43,7 @@ In your terminal, run the following:
 - Please make sure your device is plugged in before running `xcode-select --install`. This will take quite a while.
 - `git clone <link to repository>`
 - `cd CSE185FinalProject_GWAS`
+- Type `ls` and check that all the appropriate files are displayed.
 
 # Available files for testing
 in the "Testing" directory, we have included examples of properly formatted inputs
