@@ -8,7 +8,7 @@ Our aim is to create a genome-wide association study (GWAS) tool to find signifi
 
 Install python through [this link](https://www.python.org/downloads/). Download the proper version for your device.
 - Go to your command line and check to see if `Python` is installed with `python3 --version`
-- Note* every command run through `python3` must be in the format `python3 [command]`.
+- *Note every command run through `python3` must be in the format `python3 [command]`.
 - The Jupyter Notebook is a great alternative (instead of the command line).  
 
 To implement many of the packages in python in your local directory, download Anaconda through [this link](https://www.anaconda.com/download).
@@ -27,13 +27,14 @@ The program requires the following python packages:
 - `gzip`
 - `pandas_plink`
 
-If any of these python packages have to be installed, use the pip command to install it:
+If any of these python packages have to be installed, use the pip command to install it:  
+*Note if `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied".
 - `pip install numpy`
-- `python -m pip install statsmodels`
-- `python -m pip install -U matplotlib`
+- `pip install statsmodels`
+- `pip install -U matplotlib`
 - `pip install pandas`
 - `pip install argparse`
-- `pip install pandas-plink`
+- `conda install -c conda-forge pandas-plink`
 
 # Clone the repository locally
 in your terminal, run the following:
