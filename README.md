@@ -15,6 +15,7 @@ To implement many of the packages in python in your local directory, download An
 - Once installed, type `ls` in your home directory and check if there is a directory `anaconda3`.
 - Once `anaconda3` is in your home directory, you can proceed.
 - Use the `pip install` format below in order to install the required packages.  
+- Please make sure your device is plugged in before running `xcode-select --install`. This will take quite a while. This ensures that the the command like arguments such as `git clone [file]` can run correctly. 
 
 The program requires the following python packages:
 - `random`
@@ -40,7 +41,6 @@ If any of these python packages have to be installed, use the pip command to ins
 
 # Clone the repository locally
 In your terminal, run the following:
-- Please make sure your device is plugged in before running `xcode-select --install`. This will take quite a while.
 - `git clone <link to repository>`
 - `cd CSE185FinalProject_GWAS`
 - Type `ls` and check that all the appropriate files are displayed.
