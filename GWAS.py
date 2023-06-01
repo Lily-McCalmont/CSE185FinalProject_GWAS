@@ -5,16 +5,19 @@ import matplotlib.pyplot as plt
 import argparse
 import pandas as pd
 import os.path
+import os
 import gzip
 import pandas_plink
-
+from sklearn.preprocessing import StandardScaler
+scale = StandardScaler()
 
 #---parse arguments
 arg = argparse.ArgumentParser()
 arg.add_argument('geno') #plink format
 arg.add_argument("-p", dest = "plot", help = "If Plot shows", type = bool)
-arg.add_argument("-sig", dest = "signficant", help = "only show signficant variants", type = bool)
+arg.add_argument("-sig", dest = "signficant", help = "only show genome-wide signficant variants", type = bool)
 arg.add_argument("-sim", dest = "simulate", help = "run a simulation of GWAS without using real data, input a any ghost string for first argument and use this flag", type = bool)
+arg.add_argument("-pca", dest = "pca", help = "control for principle components? default 3", type = bool)
 
 arguments = arg.parse_args()
 
@@ -57,56 +60,76 @@ if arguments.plot is True:
     print("program will plot final manhattan plot and p value distribution")
 
 if arguments.signficant is True:
-    print("only output significant hits")
-
+    print("only output genome-wide significant hits")
+if arguments.pca is True:
+    print("automatically calculating top 3 PCs and adding them as covariates to the regression")
 
 #---read in genotypes
 
 if os.path.isfile((arguments.geno + ".bed")):
     bim,fam,geno  = pandas_plink.read_plink(arguments.geno)
     geno_matrix = geno.compute()
-    print(geno_matrix.shape)
     df = pd.DataFrame({'snp' : bim.iloc[:,1]})
-    print(df)
     pheno = fam['trait'].to_numpy() #REQUIRES PHENO TO BE IN 6TH COLUMN OF FAM FILE
-    #print(pheno)
 else:
     print("invalid genotype file. make sure file exists")
     quit()
 
+
 #format geno and pheno for linear regression 
 geno = np.transpose(geno_matrix)
-#print(pheno.shape)
-#print(geno.shape)
 def floatit(i):
     return float(i)
 pheno = list(map(floatit, pheno))
 
+print("genotypes and phenotypes properly extracted and formatted")
 
-#linear regression for each snp
+#scale the genotypes
+geno = scale.fit_transform(geno)
+print("genotypes scaled")
+
+#store betas and p values
 betas = []
 p_values = []
 
-for i in range(geno.shape[1]):
-    lm = sm.OLS(pheno, geno[:,i].reshape(-1, 1), missing = 'drop').fit()
-    #print(lm.pvalues[0])
-    betas.append(lm.params[0])
-    p_values.append(lm.pvalues[0])
+
+#pca 
+if arguments.pca is True:
+    print("computing principle components and including them into the regression")
+    pca = 3
+    os.system('plink --bfile ' + str(arguments.geno) + ' --out gwas_pca --pca ' + str(pca)) #create .eigenvec file
+    pc = pd.read_csv("gwas_pca.eigenvec", header=None, delimiter=r"\s+")
+    #extract pc columns as arrays
+    pc1 = pc[2].to_numpy() 
+    pc2 = pc[3].to_numpy() 
+    pc3 = pc[4].to_numpy() 
+    
+    #linear regression including pcs
+    for i in range(geno.shape[1]):
+        #create matrix of snp, pc1, pc2, pc3
+        X = np.concatenate((geno[:,i].reshape(-1, 1), pc1.reshape(-1, 1), pc2.reshape(-1, 1), pc3.reshape(-1, 1)), axis=1) 
+        X = sm.add_constant(X)
+        lm = sm.OLS(pheno, X, missing = 'drop').fit()
+        betas.append(lm.params[1])
+        p_values.append(lm.pvalues[1])
+
+else:
+    #linear regression for each snp no pc
+    print("performing linear regression without principle componenets")
+    for i in range(geno.shape[1]):
+        X = geno[:,i].reshape(-1, 1)
+        X = sm.add_constant(X)
+        lm = sm.OLS(pheno, X, missing = 'drop').fit()
+        betas.append(lm.params[1])
+        p_values.append(lm.pvalues[1])
 
 
 if arguments.plot is True:
+    print("creating plots")
     #plot histogram of p values in 100 bins
     plt.hist(p_values, bins=1000)
     plt.savefig('lab3_pvalues.png')
-
-
-#function to filter for nominally significant
-def filter_nominal(i):
-    return i < 0.05
-
-#function to filter for genome-wide significant 
-def filter_bonferroni(i):
-    return i < 5e-8 #change to number of snps
+    #plot manhattan
 
 #make a dataframe of snps and p values
 df['pvalues'] = p_values
@@ -115,14 +138,14 @@ df['beta'] = betas
 #if user only wants significant hits, subset to those
 #write a table of hits and their p values
 if arguments.signficant is True:
-    significant_df = df[df['pvalues'] < 0.05]
+    print("writing significant results to a csv file")
+    significant_df = df[df['pvalues'] < 5e-8]
     significant_df.sort_values(by = 'pvalues', inplace = True)
     significant_df.to_csv("significant.csv", index = False)
 else:
+    print("writing all results to a csv file")
     df.sort_values(by = 'pvalues', inplace = True)
-    df.to_csv("results.csv")
-
-#plot results? - manhattan
+    df.to_csv("results.csv", index = False)
 
 
 
