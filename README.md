@@ -28,6 +28,7 @@ The program requires the following python packages:
 - `os.path`
 - `gzip`
 - `pandas_plink`
+- `scikit-learn`
 
 If any of these python packages have to be installed, use the pip command to install it:  
 *Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied".
@@ -37,6 +38,7 @@ If any of these python packages have to be installed, use the pip command to ins
 - `pip install pandas`
 - `pip install argparse`
 - `conda install -c conda-forge pandas-plink`   
+- `pip install -U scikit-learn`
 
 *Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
 
