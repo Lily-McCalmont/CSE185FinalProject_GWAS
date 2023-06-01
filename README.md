@@ -18,6 +18,9 @@ To implement many of the packages in python in your local directory, download An
 - Use `pip install GitPython` to install git into the terminal.
 - If there is an error cloning the repository, run `xcode-select --install`. Please make sure your device is plugged in before running. This will take quite a while. This ensures that the the command like arguments such as `git clone [file]` can run correctly if there is an error. 
 
+`Plink` must be installed to run the program. 
+Install plink through [this link](https://www.cog-genomics.org/plink/).
+
 The program requires the following python packages:
 - `random`
 - `numpy`
