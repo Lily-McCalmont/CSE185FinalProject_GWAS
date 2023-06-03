@@ -1,0 +1,11 @@
+X	runtime	tool
+100	1.68	OURS
+500	1.83	OURS
+2000	2.87	OURS
+5000	4.14	OURS
+10000	6.8	OURS
+100	0.038	plink
+500	0.057	plink
+2000	0.067	plink
+5000	0.1	plink
+10000	0.117	plink

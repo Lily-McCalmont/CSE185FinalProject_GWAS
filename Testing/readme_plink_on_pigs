@@ -1,0 +1,4 @@
+plink --bfile pigs --out plink_pigs --pca 3
+
+plink --bfile pigs --linear hide-covar --maf 0.05 --no-sex --out plink_pigs --covar plink_pigs.eigenvec
+

@@ -14,10 +14,10 @@ scale = StandardScaler()
 #---parse arguments
 arg = argparse.ArgumentParser()
 arg.add_argument('geno') #plink format
-arg.add_argument("-p", dest = "plot", help = "If Plot shows", type = bool)
-arg.add_argument("-sig", dest = "signficant", help = "only show genome-wide signficant variants", type = bool)
-arg.add_argument("-sim", dest = "simulate", help = "run a simulation of GWAS without using real data, input a any ghost string for first argument and use this flag", type = bool)
-arg.add_argument("-pca", dest = "pca", help = "control for principle components? default 3", type = bool)
+arg.add_argument("-p", dest = "plot", help = "If Plot shows", action=argparse.BooleanOptionalAction)
+arg.add_argument("-sig", dest = "significant", help = "only show genome-wide signficant variants", action=argparse.BooleanOptionalAction)
+arg.add_argument("-sim", dest = "simulate", help = "run a simulation of GWAS without using real data, input a any ghost string for first argument and use this flag", action=argparse.BooleanOptionalAction)
+arg.add_argument("-pca", dest = "pca", help = "control for principle components? default 3", action=argparse.BooleanOptionalAction)
 
 arguments = arg.parse_args()
 
@@ -59,8 +59,9 @@ if not os.path.isfile(arguments.geno + ".fam"):
 if arguments.plot is True:
     print("program will plot final manhattan plot and p value distribution")
 
-if arguments.signficant is True:
+if arguments.significant is True:
     print("only output genome-wide significant hits")
+
 if arguments.pca is True:
     print("automatically calculating top 3 PCs and adding them as covariates to the regression")
 
@@ -69,7 +70,12 @@ if arguments.pca is True:
 if os.path.isfile((arguments.geno + ".bed")):
     bim,fam,geno  = pandas_plink.read_plink(arguments.geno)
     geno_matrix = geno.compute()
-    df = pd.DataFrame({'snp' : bim.iloc[:,1]})
+    print(bim)
+    print(fam)
+    df = pd.DataFrame({'snp' : bim.iloc[:, 1],
+        'chrom' : bim.iloc[:, 0], #'chr' for human
+        'pos' : bim.iloc[:, 3]
+        })
     pheno = fam['trait'].to_numpy() #REQUIRES PHENO TO BE IN 6TH COLUMN OF FAM FILE
 else:
     print("invalid genotype file. make sure file exists")
@@ -97,8 +103,8 @@ p_values = []
 if arguments.pca is True:
     print("computing principle components and including them into the regression")
     pca = 3
-    os.system('plink --bfile ' + str(arguments.geno) + ' --out gwas_pca --pca ' + str(pca)) #create .eigenvec file
-    pc = pd.read_csv("gwas_pca.eigenvec", header=None, delimiter=r"\s+")
+    os.system('plink --bfile ' + str(arguments.geno) + ' --out ' + arguments.geno + '.gwas_pca --pca ' + str(pca)) #create .eigenvec file
+    pc = pd.read_csv( arguments.geno + ".gwas_pca.eigenvec", header=None, delimiter=r"\s+")
     #extract pc columns as arrays
     pc1 = pc[2].to_numpy() 
     pc2 = pc[3].to_numpy() 
@@ -110,6 +116,7 @@ if arguments.pca is True:
         X = np.concatenate((geno[:,i].reshape(-1, 1), pc1.reshape(-1, 1), pc2.reshape(-1, 1), pc3.reshape(-1, 1)), axis=1) 
         X = sm.add_constant(X)
         lm = sm.OLS(pheno, X, missing = 'drop').fit()
+        print(lm.pvalues[1])
         betas.append(lm.params[1])
         p_values.append(lm.pvalues[1])
 
@@ -126,9 +133,9 @@ else:
 
 if arguments.plot is True:
     print("creating plots")
-    #plot histogram of p values in 100 bins
+    #plot histogram of p values in 10000 bins
     plt.hist(p_values, bins=1000)
-    plt.savefig('lab3_pvalues.png')
+    plt.savefig( arguments.geno + '_pvalues.png')
     #plot manhattan
 
 #make a dataframe of snps and p values
@@ -137,15 +144,15 @@ df['beta'] = betas
 
 #if user only wants significant hits, subset to those
 #write a table of hits and their p values
-if arguments.signficant is True:
+if arguments.significant is True:
     print("writing significant results to a csv file")
     significant_df = df[df['pvalues'] < 5e-8]
     significant_df.sort_values(by = 'pvalues', inplace = True)
-    significant_df.to_csv("significant.csv", index = False)
+    significant_df.to_csv( arguments.geno + ".significant.csv", index = False)
 else:
     print("writing all results to a csv file")
     df.sort_values(by = 'pvalues', inplace = True)
-    df.to_csv("results.csv", index = False)
+    df.to_csv( arguments.geno + ".results.csv", index = False)
 
 
 

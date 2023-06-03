@@ -1,0 +1,29 @@
+PLINK v1.90b6.9 64-bit (4 Mar 2019)
+Options in effect:
+  --bfile Testing/pigs
+  --out Testing/pigs.gwas_pca
+  --pca 3
+
+Hostname: dsmlp-jupyter-kakamatsu
+Working directory: /home/kakamatsu/CSE185FinalProject_GWAS
+Start time: Fri Jun  2 20:42:39 2023
+
+Random number seed: 1685738559
+386413 MB RAM detected; reserving 193206 MB for main workspace.
+47157 variants loaded from .bim file.
+4260 people (0 males, 0 females, 4260 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to Testing/pigs.gwas_pca.nosex .
+4260 phenotype values loaded from .fam.
+Warning: Ignoring phenotypes of missing-sex samples.  If you don't want those
+phenotypes to be ignored, use the --allow-no-sex flag.
+Using up to 79 threads (change this with --threads).
+Before main variant filters, 4260 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+47157 variants and 4260 people pass filters and QC.
+Note: No phenotypes present.
+Excluding 2041 variants on non-autosomes from relationship matrix calc.
+Relationship matrix calculation complete.
+--pca: Results saved to Testing/pigs.gwas_pca.eigenval and
+Testing/pigs.gwas_pca.eigenvec .
+
+End time: Fri Jun  2 20:43:21 2023

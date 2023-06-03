@@ -1,0 +1,29 @@
+PLINK v1.90b6.9 64-bit (4 Mar 2019)
+Options in effect:
+  --bfile ../../Testing/lab3_try
+  --extract plink_subsets/100.txt
+  --make-bed
+  --out plink_subsets/100
+
+Hostname: dsmlp-jupyter-kakamatsu
+Working directory: /home/kakamatsu/CSE185FinalProject_GWAS/Benchmark/runtime
+Start time: Sat Jun  3 01:29:43 2023
+
+Random number seed: 1685755783
+386413 MB RAM detected; reserving 193206 MB for main workspace.
+917845 variants loaded from .bim file.
+207 people (0 males, 0 females, 207 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to plink_subsets/100.nosex .
+207 phenotype values loaded from .fam.
+--extract: 100 variants remaining.
+Warning: Ignoring phenotypes of missing-sex samples.  If you don't want those
+phenotypes to be ignored, use the --allow-no-sex flag.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 207 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+100 variants and 207 people pass filters and QC.
+Phenotype data is quantitative.
+--make-bed to plink_subsets/100.bed + plink_subsets/100.bim +
+plink_subsets/100.fam ... done.
+
+End time: Sat Jun  3 01:29:44 2023

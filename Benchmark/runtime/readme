@@ -1,0 +1,18 @@
+benchmarking our tool against plink 
+
+for a fair comparison, we are running our tool without the options -p (plot) -sig (filter for significant) -pca (control pcs) 
+this ensures we match the functionality of plink
+
+
+lab3 dataset 
+	our tool 
+
+		real    7m25.842s
+		user    7m19.974s
+		sys     0m8.650s
+
+	plink 
+
+		real    0m8.381s
+		user    0m7.823s
+		sys     0m0.359s	

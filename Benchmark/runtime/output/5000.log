@@ -1,0 +1,30 @@
+PLINK v1.90b6.9 64-bit (4 Mar 2019)
+Options in effect:
+  --bfile plink_subsets/5000
+  --linear
+  --maf 0.05
+  --no-sex
+  --out output/5000
+  --pheno ../../Testing/lab3_gwas.phen
+
+Hostname: dsmlp-jupyter-kakamatsu
+Working directory: /home/kakamatsu/CSE185FinalProject_GWAS/Benchmark/runtime
+Start time: Sat Jun  3 01:29:55 2023
+
+Random number seed: 1685755795
+386413 MB RAM detected; reserving 193206 MB for main workspace.
+5000 variants loaded from .bim file.
+207 people (0 males, 0 females, 207 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to output/5000.nosex .
+207 phenotype values present after --pheno.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 207 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.999911.
+417 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+4583 variants and 207 people pass filters and QC.
+Phenotype data is quantitative.
+Writing linear model association results to output/5000.assoc.linear ... done.
+
+End time: Sat Jun  3 01:29:56 2023
