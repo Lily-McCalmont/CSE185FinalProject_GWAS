@@ -82,7 +82,7 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 # Examples 
 To run a simulation: 
 
-`python GWAS.py randomfile -sim True`
+`python GWAS.py randomfile -sim`
   
 To run the testing dataset from lab3 while controlling pcs and output only genome-wide significant results:
 
