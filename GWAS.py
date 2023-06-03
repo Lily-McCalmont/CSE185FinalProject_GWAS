@@ -70,8 +70,6 @@ if arguments.pca is True:
 if os.path.isfile((arguments.geno + ".bed")):
     bim,fam,geno  = pandas_plink.read_plink(arguments.geno)
     geno_matrix = geno.compute()
-    print(bim)
-    print(fam)
     df = pd.DataFrame({'snp' : bim.iloc[:, 1],
         'chrom' : bim.iloc[:, 0], #'chr' for human
         'pos' : bim.iloc[:, 3]
@@ -116,7 +114,6 @@ if arguments.pca is True:
         X = np.concatenate((geno[:,i].reshape(-1, 1), pc1.reshape(-1, 1), pc2.reshape(-1, 1), pc3.reshape(-1, 1)), axis=1) 
         X = sm.add_constant(X)
         lm = sm.OLS(pheno, X, missing = 'drop').fit()
-        print(lm.pvalues[1])
         betas.append(lm.params[1])
         p_values.append(lm.pvalues[1])
 
@@ -153,7 +150,5 @@ else:
     print("writing all results to a csv file")
     df.sort_values(by = 'pvalues', inplace = True)
     df.to_csv( arguments.geno + ".results.csv", index = False)
-
-
 
 
