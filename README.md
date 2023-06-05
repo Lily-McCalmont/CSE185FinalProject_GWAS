@@ -67,7 +67,7 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 ![image](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/assets/134024621/5fc22cdc-263d-48c5-8fbc-7363074e7e16) 
 
 # Options
-- `-p`: plot the distribution of p-values as a histogram, otherwise don't plot
+- `-p`: make a Manhattan plot with the distribution of p-values
 - `-sig`: save only genome-wide significant hits, otherwise output all snps
 - `-sim`: run simulation, without real genotype and phenotype data. please put a random file name as the path to plink files
 - `-pca`: compute and control for top 3 principle components, otherwise don't control of pcs
