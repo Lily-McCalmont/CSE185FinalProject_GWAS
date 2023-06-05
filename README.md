@@ -73,8 +73,8 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 - `-pca`: compute and control for top 3 principle components, otherwise don't control of pcs
 
 # Outputs
-- "significant.csv" = csv file of gennome-wide significant hits. column 1 = snps, column 2 = p values, column 3 = betas
-- "results.csv" = csv file of all associations. column 1 = snps, column 2 = p values, column 3 = betas
+- "significant.csv" = csv file of gennome-wide significant hits.
+- "results.csv" = csv file of all associations.
 - "simulation_betas.png" = a histogram of betas when you use the simulated option
 - "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
 - "gwas_pca" eigenvec/eigenval/log/nosex = intermediate files of pca   
