@@ -32,7 +32,7 @@ The program requires the following python packages:
 - `gzip`
 - `pandas_plink`
 - `scikit-learn`
-- 'seaborn'
+- `seaborn`
 
 If any of these python packages have to be installed, use the pip command to install it:  
 *Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied".
