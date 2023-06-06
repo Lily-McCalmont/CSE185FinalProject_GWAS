@@ -78,6 +78,7 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 - "significant.csv" = csv file of gennome-wide significant hits.
 - "results.csv" = csv file of all associations.
 - "simulation_betas.png" = a histogram of betas when you use the simulated option
+- "manhattan.png" = a manhattan plot which represents the p-values of chromosomes
 - "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
 - "gwas_pca" eigenvec/eigenval/log/nosex = intermediate files of pca   
   
