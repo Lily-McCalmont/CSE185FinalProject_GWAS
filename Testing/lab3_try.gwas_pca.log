@@ -6,9 +6,9 @@ Options in effect:
 
 Hostname: dsmlp-jupyter-kakamatsu
 Working directory: /home/kakamatsu/CSE185FinalProject_GWAS
-Start time: Sat Jun  3 02:06:46 2023
+Start time: Mon Jun  5 07:01:07 2023
 
-Random number seed: 1685758006
+Random number seed: 1685948467
 386413 MB RAM detected; reserving 193206 MB for main workspace.
 917845 variants loaded from .bim file.
 207 people (0 males, 0 females, 207 ambiguous) loaded from .fam.
@@ -26,4 +26,4 @@ Relationship matrix calculation complete.
 --pca: Results saved to Testing/lab3_try.gwas_pca.eigenval and
 Testing/lab3_try.gwas_pca.eigenvec .
 
-End time: Sat Jun  3 02:06:56 2023
+End time: Mon Jun  5 07:01:16 2023

@@ -127,14 +127,6 @@ else:
         betas.append(lm.params[1])
         p_values.append(lm.pvalues[1])
 
-
-if arguments.plot is True:
-    print("creating plots")
-    #plot histogram of p values in 10000 bins
-    plt.hist(p_values, bins=1000)
-    plt.savefig( arguments.geno + '_pvalues.png')
-    #plot manhattan
-
 #make a dataframe of snps and p values
 df['pvalues'] = p_values
 df['beta'] = betas
@@ -152,3 +144,11 @@ else:
     df.to_csv( arguments.geno + ".results.csv", index = False)
 
 
+if arguments.plot is True:
+    print("creating plots")
+    #plot manhattan
+    if arguments.significant is True:
+        filename = arguments.geno + ".significant.csv"
+    else:
+        filename = arguments.geno + ".results.csv"
+    os.system('python Manhattan.py ' + filename)
