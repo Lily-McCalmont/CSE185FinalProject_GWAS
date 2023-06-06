@@ -41,9 +41,9 @@ If any of these python packages have to be installed, use the pip command to ins
 - `pip install -U matplotlib`
 - `pip install pandas`
 - `pip install argparse`
-- `conda install -c conda-forge pandas-plink`   
 - `pip install -U scikit-learn`
-- 'pip install seaborn'
+- `pip install seaborn`
+- `conda install -c conda-forge pandas-plink`   
 
 *Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
 
@@ -88,7 +88,7 @@ To run a simulation:
   
 To run the testing dataset from lab3 while controlling pcs and output only genome-wide significant results:
 
-`python GWAS.py Testing/lab3_try -p -sig -pca`
+`python GWAS.py Testing/lab3_try -p True -sig True -pca`
   
 # Recommendations
 - if you are finding associations for a large number of snps, use nohup to run the program in the background
