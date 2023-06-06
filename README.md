@@ -75,6 +75,7 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 - `-pca`: compute and control for top 3 principle components, otherwise don't control of pcs
 
 # Outputs
+The outputs from our program will be files that must be opened and viewed. These include:
 - "significant.csv" = csv file of gennome-wide significant hits.
 - "results.csv" = csv file of all associations.
 - "simulation_betas.png" = a histogram of betas when you use the simulated option
