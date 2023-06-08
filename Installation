@@ -1,4 +1,5 @@
-# These commands are here to streamline the installation process
+# These commands are here to streamline the installation process. If there is trouble installing the packages needed, 
+please reference the commands below.
 
 pip install numpy
 pip install statsmodels
