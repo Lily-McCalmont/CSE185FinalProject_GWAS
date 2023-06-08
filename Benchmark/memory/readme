@@ -1,3 +1,7 @@
 # To track memory usage for our program in real time, use the "top" command in terminal.
 
-Note* It might be useful to open two terminals, one to run the program, and another to monitor the CPU and memory usage using top. 
+Note* 
+It might be useful to open two terminals, one to run the program, and another to monitor the CPU and memory usage using top. 
+Our results are shown in the MEM.png above.
+
+This was the most effective way for use to benchmark memory after memusg did not work in terminal (for us).
