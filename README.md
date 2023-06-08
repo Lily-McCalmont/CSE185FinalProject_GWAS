@@ -90,7 +90,7 @@ To run a simulation:
   
 To run the testing dataset from lab3 while controlling pcs and output only genome-wide significant results:
 
-`python GWAS.py Testing/lab3_try -p True -sig True -pca`
+`python GWAS.py Testing/lab3_try -p -sig -pca`
   
 # Recommendations
 - if you are finding associations for a large number of snps, use nohup to run the program in the background
