@@ -32,7 +32,7 @@ The program requires the following python packages:
 - `gzip`
 - `pandas_plink`
 - `scikit-learn`
-- 'seaborn'
+- `seaborn`
 
 If any of these python packages have to be installed, use the pip command to install it:  
 *Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied".
@@ -41,9 +41,9 @@ If any of these python packages have to be installed, use the pip command to ins
 - `pip install -U matplotlib`
 - `pip install pandas`
 - `pip install argparse`
-- `conda install -c conda-forge pandas-plink`   
 - `pip install -U scikit-learn`
-- 'pip install seaborn'
+- `pip install seaborn`
+- `conda install -c conda-forge pandas-plink`   
 
 *Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
 
@@ -69,15 +69,17 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 ![image](https://github.com/Lily-McCalmont/CSE185FinalProject_GWAS/assets/134024621/5fc22cdc-263d-48c5-8fbc-7363074e7e16) 
 
 # Options
-- `-p`: make a Manhattan plot with the distribution of p-values
+- `-p`: make a Manhattan plot: chromosomal position on the X axis and -log10(p) on the Y axis
 - `-sig`: save only genome-wide significant hits, otherwise output all snps
 - `-sim`: run simulation, without real genotype and phenotype data. please put a random file name as the path to plink files
 - `-pca`: compute and control for top 3 principle components, otherwise don't control of pcs
 
 # Outputs
+The outputs from our program will be files that must be opened and viewed. These include:
 - "significant.csv" = csv file of gennome-wide significant hits.
 - "results.csv" = csv file of all associations.
 - "simulation_betas.png" = a histogram of betas when you use the simulated option
+- "manhattan.png" = a manhattan plot which represents the p-values of chromosomes
 - "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
 - "gwas_pca" eigenvec/eigenval/log/nosex = intermediate files of pca   
   
