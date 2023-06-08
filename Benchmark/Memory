@@ -1,0 +1,3 @@
+# To track memory usage for our program in real time, use the "top" command in terminal.
+
+Note* It might be useful to open two terminals, one to run the program, and another to monitor the CPU and memory usage using top. 
