@@ -5,7 +5,7 @@ Our aim is to streamline genome-wide association studies (GWAS) by integrating s
 
 # Install Instructions 
 
-***For CSE 185 graders: The datahub we used for this class is a great place to run our code because Python, Git, and Plink are already installed. Please continue to read this until we describe the python packages necessary to run our tool. Running the pip install and conda install commands we provide will ensure that all packages are installed***
+***For CSE 185 graders: The datahub we used for this class is a great place to run our code because Python, Git, and Plink are already installed. Please continue to read this until we describe the python packages necessary to run our tool. Running the "pip install" and "conda install" commands we provide will ensure that all packages are installed***
 
 `Python` must be installed to run the program. 
 
