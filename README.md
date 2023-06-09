@@ -1,7 +1,7 @@
 # CSE185FinalProject_GWAS
 
 # Genome-wide association study to identify variant-trait associations
-Our aim is to create a genome-wide association study (GWAS) tool to find significant variant-trait associations. Briefly, our tool takes in genotype data (variants) across people in plink bed/bim/fam format with the phenotype data per individual in the 6th column of the fam file. It outputs a csv file with effect size (𝜷) and a p-value for each snp (with options to limit to genome-wide significant snps). In addition, we aim to create a script to visualize GWAS data with a Manhattan plot. Our tool can be benchmarked against the plink --linear association test.
+Our aim is to streamline genome-wide association studies (GWAS) by integrating simulations, association tests, and visualizations into one tool. Briefly, our tool takes in genotype data (variants) across people in plink bed/bim/fam format with the phenotype data per individual in the 6th column of the fam file. It outputs a csv file with effect size (𝜷) and a p-value for each snp (with options to limit to genome-wide significant snps). In addition, we aim to create a script to visualize GWAS data with a Manhattan plot. Our tool can be benchmarked against the plink --linear association test.
 
 # Install Instructions 
 `Python` must be installed to run the program. 
