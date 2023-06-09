@@ -39,7 +39,7 @@ The program requires the following python packages:
 - `pandas_plink`
 - `scikit-learn`
   
-*Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied" if you try to `pip install [package]`.
+*Note: `anaconda3` will automatically download many of the packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied" if you try to `pip install [package]`.
 Please see the `Installation Errors` file above if you are having trouble. 
 
 Commands to check that all packages are installed correctly:  
