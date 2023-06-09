@@ -24,7 +24,7 @@ If you don't have git installed, use `pip install GitPython` to install git.
 
 `Plink` must be installed to run the program. 
 Install plink through [this link](https://www.cog-genomics.org/plink/).
-please make sure that `plink` can we ran from any directory
+***Please make sure that `plink` can be ran from any directory***
 
 The program requires the following python packages:
 - `random`
