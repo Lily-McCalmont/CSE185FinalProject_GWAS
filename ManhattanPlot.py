@@ -11,7 +11,6 @@ import pandas_plink
 from pandas import DataFrame
 from scipy.stats import uniform
 from scipy.stats import randint
-import seaborn as sns
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file", help="path to csv file of results", type=str)

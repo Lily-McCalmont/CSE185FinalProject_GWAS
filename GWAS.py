@@ -151,4 +151,4 @@ if arguments.plot is True:
         filename = arguments.geno + ".significant.csv"
     else:
         filename = arguments.geno + ".results.csv"
-    os.system('python Manhattan.py ' + filename)
+    os.system('python ManhattanPlot.py ' + filename)
