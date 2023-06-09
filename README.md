@@ -39,12 +39,12 @@ The program requires the following python packages:
 Please see the `Installation Errors` file above if you are having trouble.
 
 Commands to check that all packages are installed correctly:
-`pip install numpy`
-`pip install statsmodels`
-`pip install -U matplotlib`
-`pip install pandas`
-`pip install argparse`
-`pip install -U scikit-learn`
+`pip install numpy`  
+`pip install statsmodels`  
+`pip install -U matplotlib`  
+`pip install pandas`  
+`pip install argparse`  
+`pip install -U scikit-learn` 
 
 Installing `pandas-plink`.
 - `conda install -c conda-forge pandas-plink`   
