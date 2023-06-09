@@ -1,12 +1,12 @@
 # These commands are here to streamline the installation process. If there is trouble installing the packages needed, 
 please reference the commands below.
 
-when we use conda to install pandas plink, make sure that the python environment you are using is the python environment from anaconda, 
-otherwise, even if you install pandas plink using the command we gave them, it will not be in the correct python environment 
+When using conda to install pandas plink, make sure that the python environment is from anaconda, 
+otherwise, even if you install pandas plink using the command it will not be the right environment.
 
-if you get this error message
+If there is an error message:
 "ImportError: DLL load failed while importing _imaging: The specified module could not be found."
 
-reinstall pillow with:
+Reinstall pillow in your terminal with:
 pip uninstall pillow
 pip install pillow
