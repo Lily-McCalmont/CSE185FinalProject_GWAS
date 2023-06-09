@@ -15,6 +15,7 @@ To install python and important packages that are commonly used in python, downl
 *Note: every command run through `python3` must be in the format `python3 [command]`.
 - If this is not working, make sure that you have added the path to anaconda to the environment variables PATH
 - We will use the `pip install` and `conda install` format in order to install the required packages.
+
 *Note: since we are downloading some packages with `conda install`, please make sure the python environment being used is the one provided by anaconda.
 
 If you don't have git installed, use `pip install GitPython` to install git.
