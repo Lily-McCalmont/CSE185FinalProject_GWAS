@@ -4,12 +4,14 @@
 Our aim is to streamline genome-wide association studies (GWAS) by integrating simulations, association tests, and visualizations into one tool. Briefly, our tool takes in genotype data (variants) across people in plink bed/bim/fam format with the phenotype data per individual in the 6th column of the fam file. It outputs a csv file with effect size (𝜷) and a p-value for each snp (with options to limit to genome-wide significant snps). In addition, we created a script to visualize GWAS data with a Manhattan plot. Our tool can be benchmarked against the plink --linear association test.
 
 # Install Instructions 
+
+***For CSE 185 graders: The datahub we used for this class is a great place to run our code because Python, Git, and Plink are already installed. Please continue to read this until we describe the python packages necessary to run our tool. Running the pip install and conda install commands we provide will ensure that all packages are installed***
+
 `Python` must be installed to run the program. 
 
 Install python through [this link](https://www.python.org/downloads/). Download the proper version for your device.
 - Go to your command line and check to see if `Python` is installed with `python3 --version` or `python --version`.  
 *Note: every command run through `python3` must be in the format `python3 [command]`.
-- The Jupyter Notebook is a great alternative (instead of the command line).  
 
 To install many important packages that are commonly used in python, download Anaconda through [this link](https://www.anaconda.com/download).
 - Once installed, type `ls` in your home directory and check if there is a directory `anaconda3`.
