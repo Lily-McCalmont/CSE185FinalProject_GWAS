@@ -15,7 +15,9 @@ To install many important packages that are commonly used in python, download An
 - Once installed, type `ls` in your home directory and check if there is a directory `anaconda3`.
 - Once `anaconda3` is in your home directory, you can proceed.
 - Use the `pip install` format below in order to install the required packages.  
-- Use `pip install GitPython` to install git.
+
+Use `pip install GitPython` to install git.
+
 - If there is an error cloning the repository, run `xcode-select --install`. Please make sure your device is plugged in before running. This will take quite a while. This ensures that the the command line arguments such as `git clone [file]` can run correctly if there is an error. 
 
 `Plink` must be installed to run the program. 
@@ -32,19 +34,12 @@ The program requires the following python packages:
 - `gzip`
 - `pandas_plink`
 - `scikit-learn`
-- `seaborn`
+  
+*Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied" if you try to `pip install [package]`.
+Please see the `installation` file above if you are having trouble.
 
-If any of these python packages have to be installed, use the pip command to install it:  
-*Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied".
-- `pip install numpy`
-- `pip install statsmodels`
-- `pip install -U matplotlib`
-- `pip install pandas`
-- `pip install argparse`
-- `pip install -U scikit-learn`
-- `pip install seaborn`
+Installing `pandas-plink`.
 - `conda install -c conda-forge pandas-plink`   
-
 *Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
 
 # Clone the repository locally
