@@ -9,21 +9,21 @@ Our aim is to streamline genome-wide association studies (GWAS) by integrating s
 
 `Python` must be installed to run the program. 
 
-Install python through [this link](https://www.python.org/downloads/). Download the proper version for your device.
-- Go to your command line and check to see if `Python` is installed with `python3 --version` or `python --version`.  
-*Note: every command run through `python3` must be in the format `python3 [command]`.
-
-To install many important packages that are commonly used in python, download Anaconda through [this link](https://www.anaconda.com/download).
+To install python and important packages that are commonly used in python, download Anaconda through [this link](https://www.anaconda.com/download).
 - Once installed, type `ls` in your home directory and check if there is a directory `anaconda3`.
-- Once `anaconda3` is in your home directory, you can proceed.
-- Use the `pip install` format below in order to install the required packages.  
+- Go to your command line and check to see if `Python` is installed by running `python3 --version` or `python --version`.  
+*Note: every command run through `python3` must be in the format `python3 [command]`.
+- If this is not working, make sure that you have added the path to anaconda to the environment variables path
+- We will use the `pip install` and `conda install` format in order to install the required packages.
+*Note: since we are downloading some packages with `conda install`, please make sure the python environment being used is the one provided by anaconda.
 
-Use `pip install GitPython` to install git.
+If you don't have git installed, use `pip install GitPython` to install git.
 
 - If there is an error cloning the repository, run `xcode-select --install`. Please make sure your device is plugged in before running. This will take quite a while. This ensures that the the command line arguments such as `git clone [file]` can run correctly if there is an error. 
 
 `Plink` must be installed to run the program. 
 Install plink through [this link](https://www.cog-genomics.org/plink/).
+please make sure that `plink` can we ran from any directory
 
 The program requires the following python packages:
 - `random`
@@ -38,7 +38,7 @@ The program requires the following python packages:
 - `scikit-learn`
   
 *Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied" if you try to `pip install [package]`.
-Please see the `Installation Errors` file above if you are having trouble.
+Please see the `Installation Errors` file above if you are having trouble. 
 
 Commands to check that all packages are installed correctly:  
 - `pip install numpy`  
@@ -50,7 +50,8 @@ Commands to check that all packages are installed correctly:
 
 Installing `pandas-plink`.
 - `conda install -c conda-forge pandas-plink`   
-*Note: installing pandas-plink will take a little bit, but make sure to click `y` in order to proceed with the download.
+*Note: installing pandas-plink will take some time, but make sure to click `y` in order to proceed with the download.
+*Note: if the script is unable to find the pandas plink module event after you installed it, please double check that the python environment being used is the one provided from anaconda
 
 # Clone the repository locally
 In your terminal, run the following:
@@ -81,11 +82,10 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 
 # Outputs
 The outputs from our program will be files that must be opened and viewed. These include:
-- "significant.csv" = csv file of gennome-wide significant hits.
-- "results.csv" = csv file of all associations.
+- "significant.csv" = csv file of gennome-wide significant hits(when you use the -sig option)
+- "results.csv" = csv file of all associations (when you don't use the -sig option)
 - "simulation_betas.png" = a histogram of betas when you use the simulated option
-- "manhattan.png" = a manhattan plot which represents the p-values of chromosomes
-- "lab3_pvalues.png" = a histogram of p-values when you use the `-p True` option
+- "manhattan.png" = a manhattan plot which plots the -log10(p-values) of all snps (when you use the -p option)
 - "gwas_pca" eigenvec/eigenval/log/nosex = intermediate files of pca   
   
 # Examples 
