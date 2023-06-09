@@ -54,7 +54,7 @@ Installing `pandas-plink`.
 - `conda install -c conda-forge pandas-plink`   
 *Note: installing pandas-plink will take some time, but make sure to click `y` in order to proceed with the download.
 
-*Note: if the script is unable to find the pandas plink module event after you installed it, please double check that the python environment being used is the one provided from anaconda
+*Note: if the script is unable to find the pandas plink module even after you installed it, please double check that the python environment being used is the one provided from anaconda
 
 # Clone the repository locally
 In your terminal, run the following:
