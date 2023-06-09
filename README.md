@@ -43,18 +43,21 @@ The program requires the following python packages:
 Please see the `Installation Errors` file above if you are having trouble. 
 
 Commands to check that all packages are installed correctly:  
+- `pip install random`
 - `pip install numpy`  
 - `pip install statsmodels`  
-- `pip install -U matplotlib`  
+- `pip install -U matplotlib` 
+- `pip install argparse` 
 - `pip install pandas`  
-- `pip install argparse`  
+- `pip install os.path`
+- `pip install gzip` 
 - `pip install -U scikit-learn` 
 
 Installing `pandas-plink`.
 - `conda install -c conda-forge pandas-plink`   
 *Note: installing pandas-plink will take some time, but make sure to click `y` in order to proceed with the download.
 
-*Note: if the script is unable to find the pandas plink module even after you installed it, please double check that the python environment being used is the one provided from anaconda
+*Note: if the script is unable to find the pandas plink module even after you installed it, please double check that the python environment being used is the one provided from anaconda. (If you are using datahub `pip install pandas-plink` will work) 
 
 # Clone the repository locally
 In your terminal, run the following:
