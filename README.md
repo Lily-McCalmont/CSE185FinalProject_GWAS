@@ -36,7 +36,15 @@ The program requires the following python packages:
 - `scikit-learn`
   
 *Note: `anaconda3` will automatically download all packages except pandas-plink which you will have to install manually. If `anaconda3` is installed correctly, the terminal should say "Requirement already satisfied" if you try to `pip install [package]`.
-Please see the `installation` file above if you are having trouble.
+Please see the `Installation Errors` file above if you are having trouble.
+
+Commands to check that all packages are installed correctly:
+pip install numpy
+pip install statsmodels
+pip install -U matplotlib
+pip install pandas
+pip install argparse
+pip install -U scikit-learn
 
 Installing `pandas-plink`.
 - `conda install -c conda-forge pandas-plink`   
