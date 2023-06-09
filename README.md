@@ -13,7 +13,7 @@ To install python and important packages that are commonly used in python, downl
 - Once installed, type `ls` in your home directory and check if there is a directory `anaconda3`.
 - Go to your command line and check to see if `Python` is installed by running `python3 --version` or `python --version`.  
 *Note: every command run through `python3` must be in the format `python3 [command]`.
-- If this is not working, make sure that you have added the path to anaconda to the environment variables path
+- If this is not working, make sure that you have added the path to anaconda to the environment variables PATH
 - We will use the `pip install` and `conda install` format in order to install the required packages.
 *Note: since we are downloading some packages with `conda install`, please make sure the python environment being used is the one provided by anaconda.
 
