@@ -1,5 +1,4 @@
-# These commands are here to streamline the installation process. If there is trouble installing the packages needed, 
-please reference the commands below.
+# If there is trouble installing the packages needed, please reference the commands below.
 
 When using conda to install pandas plink, make sure that the python environment is from anaconda, 
 otherwise, even if you install pandas plink using the command it will not be the right environment.
