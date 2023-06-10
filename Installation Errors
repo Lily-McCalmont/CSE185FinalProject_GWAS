@@ -1,7 +1,7 @@
 # If there is trouble installing the packages needed, please reference the commands below.
 
-When using conda to install pandas plink, make sure that the python environment is from anaconda, 
-otherwise, even if you install pandas plink using the command it will not be the right environment.
+When using conda to install pandas plink, make sure that the python environment is from anaconda. 
+Otherwise, even if you install pandas plink using the command, it will not be the right environment.
 
 If there is an error message:
 "ImportError: DLL load failed while importing _imaging: The specified module could not be found."
