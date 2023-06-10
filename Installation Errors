@@ -14,4 +14,4 @@ pip install pillow
 If using DataHub, and there is an error message:
 "pandas_plink...module does not exist"
 Please use: pip install pandas-plink
-This should resolve the issues if using DataHub only. 
+This should resolve the issues. 
