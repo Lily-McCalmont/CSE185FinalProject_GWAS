@@ -82,13 +82,13 @@ When running the simulation (100 individuals, 1,000 snps, maf = 0.2) to see the 
 
 # Options
 - `-p`: make a Manhattan plot: chromosomal position on the X axis and -log10(p) on the Y axis
-- `-sig`: save only genome-wide significant hits, otherwise output all snps
+- `-sig`: save only genome-wide significant hits (Omitting this will output all snps)
 - `-sim`: run simulation, without real genotype and phenotype data. please put a random file name as the path to plink files
-- `-pca`: compute and control for top 3 principle components, otherwise don't control of pcs
+- `-pca`: compute and control for top 3 principle components (Omitting this will not control for pcs)
 
 # Outputs
 The outputs from our program will be files that must be opened and viewed. These include:
-- "significant.csv" = csv file of gennome-wide significant hits(when you use the -sig option)
+- "significant.csv" = csv file of gennome-wide significant hits (when you use the -sig option)
 - "results.csv" = csv file of all associations (when you don't use the -sig option)
 - "simulation_betas.png" = a histogram of betas when you use the simulated option
 - "manhattan.png" = a manhattan plot which plots the -log10(p-values) of all snps (when you use the -p option)
